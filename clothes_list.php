@@ -1,4 +1,17 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <!DOCTYPE HTML>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$dbname = "VT";
+
+// Create connection
+ $conn = mysqli_connect($servername, $username, $password, $dbname);
+ // Check connection
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Clothes List</title>
@@ -16,7 +29,13 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>TOTAL </h1>
+					<?php
+					$query = 'SELECT count(No) FROM Clothes_info';
+					  $res = mysqli_query($conn,$query);
+	        			  $row1 = $res -> fetch_array();
+	      				$total_num = $row1[0];
+						?>
+						<h1>TOTAL <?php echo" ".$total_num." " ?> </h1>
 						<nav>
 							<ul>
 								<a href="#top"><li>TOP </li></a>
