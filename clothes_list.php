@@ -49,12 +49,12 @@ $dbname = "VT";
 						<article class="thumb">
 							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.png" alt="" id="top" /></a>
 							<h2>Top 1</h2>
-							<p>Color : Orange Type : Top Texture: -.	<a href="select_clothe.html"><button>CHOOSE</button></a></p>
+							<p>Color : Orange Type : Top Texture: -.	<a href="select_clothe.php"><button>CHOOSE</button></a></p>
 						</article>
 						<article class="thumb">
 							<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.png" alt="" /></a>
 							<h2>Outer</h2>
-							<p>Color : Black Type : Outer Texture: -.	<a href="select_clothe.html"><button>CHOOSE</button></p>
+							<p>Color : Black Type : Outer Texture: -.	<a href="select_clothe.php"><button>CHOOSE</button></p>
 						</article>
 						<article class="thumb">
 							<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.png" alt="" /></a>
