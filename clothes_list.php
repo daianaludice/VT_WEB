@@ -11,7 +11,7 @@ $dbname = "VT";
     die("Connection failed: " . mysqli_connect_error());
 }
 
-?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <!DOCTYPE HTML>
+?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <!DOCTYPE HTML>
 <html>
 	<head>
 		<title>Clothes List</title>
@@ -34,7 +34,7 @@ $dbname = "VT";
 					  $res = mysqli_query($conn,$query);
 	        			  $row1 = $res -> fetch_array();
 	      				$total_num = $row1[0];
-						?>
+                						?>
 						<h1>TOTAL <?php echo"$total_num"; ?> </h1>
 						<nav>
 							<ul>
@@ -43,7 +43,10 @@ $dbname = "VT";
 							</ul>
 						</nav>
 					</header>
-
+          <?php
+          $query2 = 'SELECT No,Color,Kind,Logo,Texture,Picture_Addr FROM Clothes_info';
+          $res2 =  mysqli_query($conn,$query2);
+            ?>
 				<!-- Main -->
 					<div id="main">
 						<article class="thumb">
@@ -119,4 +122,4 @@ $dbname = "VT";
 			<script src="assets/js/main.js"></script>
 
 	</body>
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</html>
