@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "1234";
+$password = "autoset";
 $dbname = "VT";
 
 // Create connection
@@ -49,6 +49,12 @@ $dbname = "VT";
             ?>
 				<!-- Main -->
 					<div id="main">
+            <?
+            while ($row2 = $res2->fetch_assoc())
+						{
+              echo "$row2['No']";
+            }
+            ?>
 						<article class="thumb">
 							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.png" alt="" id="top" /></a>
 							<h2>Top 1</h2>
