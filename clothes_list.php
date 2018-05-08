@@ -30,7 +30,7 @@ $dbname = "VT";
 				<!-- Header -->
 					<header id="header">
 					<?php
-					$query = 'SELECT count(No) FROM Clothes_Info';
+					$query = 'SELECT count(No) FROM Clothes_info';
 					  $res = mysqli_query($conn,$query);
 	        			  $row1 = $res -> fetch_array();
 	      				$total_num = $row1[0];
