@@ -35,6 +35,5 @@ $(document).ready(function(){
   echo "<p>$time</p>";
   ?>
 <p><img src="images/thumbs/01.png" alt=""/></p>
-<script type="text/javascript" src="getPrameter.js">
 </body>
 </html>

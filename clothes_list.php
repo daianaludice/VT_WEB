@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "autoset";
+$password = "1234";
 $dbname = "VT";
 
 // Create connection
@@ -23,14 +23,14 @@ $dbname = "VT";
 		<link rel="stylesheet" href="assets/css/ie8.css" />
 	</head>
 	<body>
-
+<br>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
 					<?php
-					$query = 'SELECT count(No) FROM Clothes_info';
+					$query = 'SELECT count(No) FROM Clothes_Info';
 					  $res = mysqli_query($conn,$query);
 	        			  $row1 = $res -> fetch_array();
 	      				$total_num = $row1[0];
@@ -44,7 +44,7 @@ $dbname = "VT";
 						</nav>
 					</header>
           <?php
-          $query2 = 'SELECT No,Color,Kind,Logo,Texture,Picture_Addr FROM Clothes_info';
+          $query2 = 'SELECT No,Color,Kind,Logo,Texture,Picture_Addr FROM Clothes_Info';
           $res2 =  mysqli_query($conn,$query2);
             ?>
 				<!-- Main -->
