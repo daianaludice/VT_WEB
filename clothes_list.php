@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "autoset";
-$dbname = "vt";
+$password = "1234";
+$dbname = "VT";
 
 // Create connection
  $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -49,66 +49,18 @@ $dbname = "vt";
             ?>
 				<!-- Main -->
 					<div id="main">
-						<article class="thumb">
-							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.png" alt="" id="top" /></a>
-							<h2>Top 1</h2>
-							<p>Color : Orange Type : Top Texture: -.	<a href="select_clothe.html"><button>CHOOSE</button></a></p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.png" alt="" /></a>
-							<h2>Outer</h2>
-							<p>Color : Black Type : Outer Texture: -.	<a href="select_clothe.html"><button>CHOOSE</button></p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.png" alt="" /></a>
-							<h2>Top 2</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.png" alt="" /></a>
-							<h2>Top 3</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.png" alt="" /></a>
-							<h2>Top 4</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.png" alt="" /></a>
-							<h2>Top 5</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.png" alt="" /></a>
-							<h2>Top 6</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/02.png" alt="" /></a>
-							<h2>Top 7</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/09.jpg" class="image"><img src="images/thumbs/08.png" alt="" /></a>
-							<h2>Top8</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/09.png" alt="" /></a>
-							<h2>Pants</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/11.jpg" class="image"><img src="images/thumbs/10.png" alt="" /></a>
-							<h2>Skirt</h2>
-							<p>None</p>
-						</article>
-						<article class="thumb">
-							<a href="images/fulls/12.jpg" class="image"><img src="images/thumbs/11.png" alt="" id="bottom" /></a>
-							<h2>Outer</h2>
-							<p>None</p>
-						</article>
+            <?php
+            while ($row2 = $res2->fetch_assoc())
+
+						{
+					 echo "<article class='thumb'>
+                 <a href='images/fulls/".$row2['Picture_Addr'].".jpg' class='image'><img src='images/thumbs/".$row2['Picture_Addr'].".png' alt='' /></a>
+                 <h2>" .$row2['Kind']."</h2>
+                 <p>Color :".$row2['Color']." Type :".$row2['Kind']." Texture : ".$row2['Texture']." <a href='select_clothe.php?Picture_Addr=".$row2['Picture_Addr']."'><button>CHOOSE</button></a></p></article> ";
+
+
+						}
+            ?>
 					</div>
 
 			</div>

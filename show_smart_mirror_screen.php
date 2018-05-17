@@ -34,6 +34,7 @@ $(document).ready(function(){
   $time =date("Y-M-d h:m:s");
   echo "<p>$time</p>";
   ?>
-<p><img src="images/thumbs/01.png" alt=""/></p>
+<p><img src="images/thumbs/1.png" alt=""/></p>
+<script type="text/javascript" src="getPrameter.js">
 </body>
 </html>
