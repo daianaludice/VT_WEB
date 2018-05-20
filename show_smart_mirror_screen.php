@@ -6,35 +6,24 @@
 <meta http-equiv="refresh" content="1">
 <script>
 $(document).ready(function(){
-        $.ajax({
-            url : "",
-            dataType : "json",
-            type : "get",
-            success : function(data){
-                $("table").html("<tr><th>x</th><th>y</th><th>width</th><th>height</th></tr>");
-                var show = "";
-                $.each(data,function(index, item){
-                    show += "<tr><td>"+item.x+"</td>";
-                    show += "<td>"+item.y+"</td>";
-                    show += "<td>"+item.width+"</td>";
-                    show += "<td>"+item.height+"</td></tr>";
-                });
-                $("table").append(show);
-            }
-        });
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET','10.30.113.210:5000/get-coordinate');
+        xhr.onreadystatechange =function(){
+          if(xhr.redayState === 4 && xhr.status === 200){
+            document.querySelector('#table').innerHTML = xhr.responseText;
+          }
+        }
+        xhr.send();
     });
 });
 </script>
 </head>
 <body>
-  <table>
-
-  </table>
+  <p style="color:red" id ="table"></p>
   <?
   $time =date("Y-M-d h:m:s");
   echo "<p>$time</p>";
   ?>
 <p><img src="images/thumbs/1.png" alt=""/></p>
-<script type="text/javascript" src="getPrameter.js">
 </body>
 </html>
