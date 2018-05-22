@@ -12,12 +12,6 @@ $dbname = "VT";
 }
 
 
-$myfile = fopen("show_mirror.txt", "w") or die("Unable to open file!");
-$log = " \n";
-fwrite($myfile, $log);
-fclose($myfile);
-
-?>  
 
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <!DOCTYPE HTML>
 <html>
