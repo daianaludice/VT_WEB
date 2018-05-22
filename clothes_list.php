@@ -11,7 +11,6 @@ $dbname = "VT";
     die("Connection failed: " . mysqli_connect_error());
 }
 
-
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <!DOCTYPE HTML>
 <html>
 	<head>
