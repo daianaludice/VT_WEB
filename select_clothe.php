@@ -13,7 +13,21 @@ $dbname = "VT";
 
 $No = addslashes($_GET["No"]);
 $Addr = addslashes($_GET["Picture_Addr"]);
+
+
+$sql = "UPDATE Coordinate SET show_addr = $Addr WHERE position = 'upper'";
+if (mysqli_query($conn,$sql)){
+  }
+  else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
+  }
+
+$myfile = fopen("show_mirror.txt", "w") or die("Unable to open file!");
+$log = "".$Addr."\n";
+fwrite($myfile, $log);
+fclose($myfile);
+
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
