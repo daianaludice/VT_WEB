@@ -11,10 +11,10 @@ $dbname = "VT";
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$query2 = "SELECT x,y,height,width FROM Coordinate where position='upper'";
+$query2 = "SELECT x,y,height,width,show_addr FROM Coordinate where position='upper'";
 $res2 =  mysqli_query($conn,$query2);
 $row2 = mysqli_fetch_array($res2);
-
+$addr = row2['show_addr'];
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +23,6 @@ $row2 = mysqli_fetch_array($res2);
 <link rel="stylesheet" href="assets/css/show_clothe_css.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
 <meta http-equiv="refresh" content="1">
-<?
-$myfile = fopen("show_mirror.txt", "r") or die("Unable to open file!");
-$addr = fgets($myfile);
-fclose($myfile);
-?>
 <style>
  #img{
   padding-left : <? echo $row2['y']?>%;

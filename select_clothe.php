@@ -20,11 +20,6 @@ if (mysqli_query($conn,$sql)){
   else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
   }
 
-$myfile = fopen("show_mirror.txt", "w") or die("Unable to open file!");
-$log = "".$Addr."\n";
-fwrite($myfile, $log);
-fclose($myfile);
-
 ?>
 <!DOCTYPE HTML>
 <html>

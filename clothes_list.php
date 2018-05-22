@@ -11,10 +11,6 @@ $dbname = "VT";
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$myfile = fopen("show_mirror.txt", "w") or die("Unable to open file!");
-$log = " \n";
-fwrite($myfile, $log);
-fclose($myfile);
 
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <!DOCTYPE HTML>
 <html>
@@ -48,7 +44,7 @@ fclose($myfile);
             </nav>
 					</header>
           <?php
-          $query2 = 'SELECT No,Color,Kind,Logo,Texture,Picture_Addr FROM Clothes_info';
+          $query2 = 'SELECT No,Color,Kind,Logo,Texture,Picture_Addr FROM Clothes_Info';
           $res2 =  mysqli_query($conn,$query2);
             ?>
 				<!-- Main -->
