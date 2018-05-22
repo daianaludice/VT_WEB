@@ -14,7 +14,6 @@ $dbname = "VT";
 $No = addslashes($_GET["No"]);
 $Addr = addslashes($_GET["Picture_Addr"]);
 
-
 $sql = "UPDATE Coordinate SET show_addr = $Addr WHERE position = 'upper'";
 if (mysqli_query($conn,$sql)){
   }
@@ -27,7 +26,6 @@ fwrite($myfile, $log);
 fclose($myfile);
 
 ?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -37,7 +35,7 @@ fclose($myfile);
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
 </head>
 <body>
 			<div id="wrapper">
@@ -60,5 +58,6 @@ fclose($myfile);
           ?>
 					</div>
 			</div>
+      <script src="getParameter.js"></script>
 </body>
 <html>

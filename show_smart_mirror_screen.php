@@ -45,4 +45,3 @@ fclose($myfile);
 <p id="img"><img src="images/thumbs/<? echo $addr; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']?>" alt=""/></p>
 </body>
 </html>
-
