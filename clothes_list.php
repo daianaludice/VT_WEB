@@ -11,10 +11,14 @@ $dbname = "VT";
     die("Connection failed: " . mysqli_connect_error());
 }
 
+<<<<<<< HEAD
 $myfile = fopen("show_mirror.txt", "w") or die("Unable to open file!");
 $log = " \n";
 fwrite($myfile, $log);
 fclose($myfile);
+=======
+
+>>>>>>> 0ca1de246a1e4c17933cf39eedff203210e6c2cc
 
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <!DOCTYPE HTML>
 <html>
