@@ -27,8 +27,8 @@ $addr =  $row2['show_addr'];
 <meta http-equiv="refresh" content="1">
 <style>
  #img{
-  padding-left : <? echo $row2['y']?>%;
-  padding-top: <? echo $row2['x']?>%;
+  padding-left : <? echo $row2['y']?>px;
+  padding-top: <? echo $row2['x']?>px;
  }
 </style>
 </head>
