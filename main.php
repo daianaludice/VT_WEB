@@ -11,7 +11,7 @@ $dbname = "VT";
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$query2 = 'SELECT Picture_Addr FROM Clothes_info';
+$query2 = 'SELECT Picture_Addr FROM Clothes_Info';
 $res2 =  mysqli_query($conn,$query2);
 
 ?>

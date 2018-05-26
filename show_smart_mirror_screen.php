@@ -15,9 +15,15 @@ $query2 = "SELECT x,y,height,width,show_addr FROM Coordinate where position='upp
 $res2 =  mysqli_query($conn,$query2);
 $row2 = mysqli_fetch_array($res2);
 
-$addr =  $row2['show_addr'];
+$query = "SELECT x,y,height,width,show_addr FROM Coordinate where position='lower'";
+$res =  mysqli_query($conn,$query);
+$row = mysqli_fetch_array($res);
+
+$addr1 = $row2['show_addr'];
+$addr2 = $row['show_addr'];
 
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -41,6 +47,7 @@ $addr =  $row2['show_addr'];
   $h_i =date("h:i");
   echo "<p style='font-size:350%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
   ?>
-<p id="img"><img src="images/thumbs/<? echo $addr; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']?>" alt=""/></p>
+<p id="img" style="position:fixed"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']?>" alt=""/></p>
+<p id="img" style="position:fixed"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']?>" width="<? echo  $row['width']?>" alt=""/></p>
 </body>
 </html>
