@@ -15,19 +15,29 @@ $query2 = 'SELECT Picture_Addr FROM Clothes_Info';
 $res2 =  mysqli_query($conn,$query2);
 
 
+$sql = "UPDATE Coordinate SET show_addr = NULL WHERE position = 'upper'";
+if (mysqli_query($conn,$sql)){
+  }
+  else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
+  }
+$sql2 = "UPDATE Coordinate SET show_addr = NULL WHERE position = 'lower'";
+  if (mysqli_query($conn,$sql2)){
+    }
+    else{ echo "Error: " .$sql2 . "<br>" . mysqli_error($conn);
+    }
+
 
 ?>
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<title>VT_MAIN</title>
+		<title>MAIN VT</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="Oassets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="Oassets/css/main.css" />
 		<noscript><link rel="stylesheet" href="Oassets/css/noscript.css" /></noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="Oassets/css/ie8.css" /><![endif]-->
-		<link rel="stylesheet" href="Oassets/css/add.css" />
 	</head>
 	<body>
 
@@ -68,7 +78,7 @@ $res2 =  mysqli_query($conn,$query2);
 								</p>
 								<section>
 									<div class="row">
-										<?php
+<?php
 				            while ($row2 = $res2->fetch_assoc())
 
 										{
