@@ -12,13 +12,6 @@ $dbname = "VT";
 }
 
 
-$myfile = fopen("show_mirror.txt", "w") or die("Unable to open file!");
-$log = " \n";
-fwrite($myfile, $log);
-fclose($myfile);
-
-?>  
-
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <!DOCTYPE HTML>
 <html>
 	<head>
@@ -73,7 +66,7 @@ fclose($myfile);
                  if($row['Texture'] == ''){
                    $row2['Texture'] = '-';
                  }
-                 echo"<p> Color :".$row2['Color']."  Type :".$row2['Kind']."  Texture : ".$row2['Texture']."<a href='select_clothe.php?No=".$row2['No']."&Picture_Addr=".$row2['Picture_Addr']."' style='padding-left:30%'><button>CHOOSE</button></a></p></article> ";
+                 echo"<p> Color :".$row2['Color']."  Type :".$row2['Kind']."  Texture : ".$row2['Texture']."<a href='select_clothe.php?No=".$row2['No']."&Picture_Addr=".$row2['Picture_Addr']."' style='padding-left:30%'><button >CHOOSE</button></a></p></article> ";
 
 						}
             ?>

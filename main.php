@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 $servername = "localhost";
 $username = "root";
-$password = "autoset";
-$dbname = "vt";
+$password = "1234";
+$dbname = "VT";
 
 // Create connection
  $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -11,21 +11,21 @@ $dbname = "vt";
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$query2 = 'SELECT Picture_Addr FROM Clothes_info';
+$query2 = 'SELECT Picture_Addr FROM Clothes_Info';
 $res2 =  mysqli_query($conn,$query2);
 
+
 ?>
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<head>
-		<title>VT_MAIN</title>
+		<title>MAIN VT</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="Oassets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="Oassets/css/main.css" />
 		<noscript><link rel="stylesheet" href="Oassets/css/noscript.css" /></noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="Oassets/css/ie8.css" /><![endif]-->
-		<link rel="stylesheet" href="Oassets/css/add.css" />
 	</head>
 	<body>
 
@@ -66,7 +66,7 @@ $res2 =  mysqli_query($conn,$query2);
 								</p>
 								<section>
 									<div class="row">
-										<?php
+<?php
 				            while ($row2 = $res2->fetch_assoc())
 
 										{
