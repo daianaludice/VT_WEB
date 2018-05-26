@@ -24,7 +24,7 @@ $addr =  $row2['show_addr'];
 <head>
 <link rel="stylesheet" href="assets/css/show_clothe_css.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-<meta http-equiv="refresh" content="1">
+<meta http-equiv="refresh" content="0.5">
 <style>
  #img{
   padding-left : <? echo $row2['y']?>px;
