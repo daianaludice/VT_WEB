@@ -10,6 +10,11 @@ $dbname = "VT";
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
+$query2 = 'SELECT Picture_Addr FROM Clothes_Info';
+$res2 =  mysqli_query($conn,$query2);
+
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -61,6 +66,15 @@ $dbname = "VT";
 								</p>
 								<section>
 									<div class="row">
+<?php
+				            while ($row2 = $res2->fetch_assoc())
+
+										{
+											echo"<div class='4u 12u$(mobile)'>
+												<a href='#' class='image fit'><img src='images/pic05.jpg' alt=''></a>
+											</div>";
+										}
+											?>
 									</div>
 								</section>
 							</article>
