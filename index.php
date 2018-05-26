@@ -1,3 +1,16 @@
+ï»¿<?php
+$servername = "localhost";
+$username = "root";
+$password = "1234";
+$dbname = "VT";
+
+// Create connection
+ $conn = mysqli_connect($servername, $username, $password, $dbname);
+ // Check connection
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -28,9 +41,9 @@
 							<article id="me" class="panel">
 								<header style="margin-top:-6%">
 									<h1>VT PROJECT</h1>
-									<p style="font-size:90%"><br>VT ÇÁ·ÎÁ§Æ®´Â »ç¿ëÀÚ°¡ °¡Áø ¿ÊÀÇ ¸®½ºÆ®µéÀ» º¸¿©ÁÝ´Ï´Ù.<br>
-									   »ç¿ëÀÚ°¡ ¿øÇÏ´Â ¿ÊÀ» ¼±ÅÃÇÏ¸é °Å¿ï À§·Î ÇØ´ç ¿ÊÀÌ ³ªÅ¸³³´Ï´Ù.<br>
-			               ÇØ´ç ¿ÊÀ» ÀÔ°í ½ÍÀ¸½Ã´Ù¸é <b><i>WEAR</i></b> ¹öÆ°À» ´©¸£°í ¿ÊÀå ¹®À» ¿­¾îÁÖ¼¼¿ä.</p>
+									<p style="font-size:90%"><br>VT í”„ë¡œì íŠ¸ëŠ” ì‚¬ìš©ìžê°€ ê°€ì§„ ì˜·ì˜ ë¦¬ìŠ¤íŠ¸ë“¤ì„ ë³´ì—¬ì¤ë‹ˆë‹¤.<br>
+									   ì‚¬ìš©ìžê°€ ì›í•˜ëŠ” ì˜·ì„ ì„ íƒí•˜ë©´ ê±°ìš¸ ìœ„ë¡œ í•´ë‹¹ ì˜·ì´ ë‚˜íƒ€ë‚©ë‹ˆë‹¤.<br>
+			               í•´ë‹¹ ì˜·ì„ ìž…ê³  ì‹¶ìœ¼ì‹œë‹¤ë©´ <b><i>WEAR</i></b> ë²„íŠ¼ì„ ëˆ„ë¥´ê³  ì˜·ìž¥ ë¬¸ì„ ì—´ì–´ì£¼ì„¸ìš”.</p>
 								</header>
 								<a href="clothes_list.php" class="jumplink pic">
 									<span class="arrow icon fa-chevron-right"><span>See my log</span></span>
@@ -43,8 +56,8 @@
 									<h2>Log</h2>
 								</header>
 								<p>
-									ÃÖ±Ù ¼±ÅÃÇÑ ¿ÊÀÇ ±â·ÏÀ» È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù.<br>
-									´Ü, ±â·ÏÀº ÃÖ±Ù ¼øÀ¸·Î 12°³±îÁö¸¸ º¸¿©Áý´Ï´Ù.
+									ìµœê·¼ ì„ íƒí•œ ì˜·ì˜ ê¸°ë¡ì„ í™•ì¸í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.<br>
+									ë‹¨, ê¸°ë¡ì€ ìµœê·¼ ìˆœìœ¼ë¡œ 12ê°œê¹Œì§€ë§Œ ë³´ì—¬ì§‘ë‹ˆë‹¤.
 								</p>
 								<section>
 									<div class="row">
