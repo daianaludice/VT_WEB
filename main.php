@@ -14,6 +14,8 @@ $dbname = "VT";
 $query2 = 'SELECT Picture_Addr FROM Clothes_Info';
 $res2 =  mysqli_query($conn,$query2);
 
+
+
 ?>
 ﻿<!DOCTYPE HTML>
 <html>
