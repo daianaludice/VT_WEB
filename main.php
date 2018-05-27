@@ -1,5 +1,5 @@
 ﻿<?php
-$servername = "34.225.233.100:3306";
+$servername = "localhost";
 $username = "root";
 $password = "1234";
 $dbname = "VT";
@@ -54,9 +54,9 @@ $sql2 = "UPDATE Coordinate SET show_addr = NULL WHERE position = 'lower'";
 					<div id="main" style="height: 400px;">
 
 						<!-- Me -->
-							<article id="me" class="panel">
+							<article id="me" class="panel" style="padding-top: 50px; margin-top : 30px;margin-left:30px;margin-right:30px;">
 								<header style="margin-top:-6%">
-                  <h1>VT PROJECT</h1>
+                  <h2>VT PROJECT</h2>
 									<p style="font-size:90%"><br>VT 프로젝트는 사용자가 가진 옷의 리스트들을 보여줍니다.<br>
 									   사용자가 원하는 옷을 선택하면 거울 위로 해당 옷이 나타납니다.<br>
 			               해당 옷을 입고 싶으시다면 <b><i>WEAR</i></b> 버튼을 누르고 옷장 문을 열어주세요.</p>
