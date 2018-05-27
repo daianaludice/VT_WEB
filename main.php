@@ -42,7 +42,7 @@ $sql2 = "UPDATE Coordinate SET show_addr = NULL WHERE position = 'lower'";
 	</head>
 	<body>
 		<!-- Wrapper-->
-			<div id="wrapper" style="padding-top: 112px; opacity: 1;">
+			<div id="wrapper">
 				<!-- Nav -->
 		  		<nav id="nav">
 						<a href="#me" class="icon fa-home active"><span>Home</span></a>
@@ -51,10 +51,10 @@ $sql2 = "UPDATE Coordinate SET show_addr = NULL WHERE position = 'lower'";
 					</nav>
 
 				<!-- Main -->
-					<div id="main" style="height: 400px;">
+					<div id="main">
 
 						<!-- Me -->
-							<article id="me" class="panel" style="padding-top: 50px; margin-top : 30px;margin-left:30px;margin-right:30px;">
+							<article id="me" class="panel" >
 								<header style="margin-top:-6%">
                   <h2>VT PROJECT</h2>
 									<p style="font-size:90%"><br>VT 프로젝트는 사용자가 가진 옷의 리스트들을 보여줍니다.<br>

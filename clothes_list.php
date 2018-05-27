@@ -44,7 +44,7 @@ $dbname = "VT";
             </nav>
 					</header>
           <?php
-          $query2 = 'SELECT No,Color,Kind,Picture_Addr FROM Clothes_info';
+          $query2 = 'SELECT No,Color,Kind,Picture_Addr FROM Clothes_Info';
           $res2 =  mysqli_query($conn,$query2);
             ?>
 				<!-- Main -->
