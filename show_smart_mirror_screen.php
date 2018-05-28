@@ -33,13 +33,13 @@ $addr2 = $row['show_addr'];
 <meta http-equiv="refresh" content="0.5">
 <style>
  #lower{
-  padding-left : <? echo $row['y'] ?>px;
+  padding-left : <? echo $row['y']-100 ?>px;
   padding-top: <? echo $row['x']+350 ?>px;
- }
+  z-index : 1; }
  #upper{
-    padding-left : <? echo $row2['y']+250 ?>px;
+    padding-left : <? echo $row2['y']+120 ?>px;
     padding-top: <? echo $row2['x']+500 ?> px;
-}
+    z-index : 4;}
 </style>
 </head>
 <body>
@@ -51,7 +51,7 @@ $addr2 = $row['show_addr'];
   $h_i =date("h:i");
   echo "<p style='font-size:500%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
   ?>
-<div id="upper" style="position:fixed"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']+100?>" width="<? echo  $row2['width']+500?>" alt=""/></div>
-<div id="lower" style="position:fixed"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']?>" width="<? echo  $row['width']+300?>" alt=""/></div>
+<div id="upper" style="position:fixed"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']+100?>" width="<? echo  $row2['width']+400?>" alt=""/></div>
+<div id="lower" style="position:fixed"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']?>" width="<? echo  $row['width']+500?>" alt=""/></div>
 </body>
 </html>
