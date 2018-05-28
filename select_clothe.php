@@ -33,7 +33,7 @@ if($position == 'lower'){
     else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
     }
 }
-
+exec("python matrix_algorithm.py");
 
 ?>
 <!DOCTYPE HTML>
