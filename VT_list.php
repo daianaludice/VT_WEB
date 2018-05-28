@@ -30,22 +30,22 @@ $dbname = "VT";
 						$row1 = $res -> fetch_array();
 					$total_num = $row1[0];
 											?>
-
-      <div style='position:fixed;background-image:url(images/배경.png);text-align:center;color:white;font-size: 200%;vertical-align: baseline;width:100%;height:10%;z-index:10000;display: block '>
-        <span style="margin-left:-5%;margin-right:10%"><a href="main.php"><- BACK</a></span>
-        입어보고싶은 옷을 선택해주세요.</div>
+      <div style='position:fixed;background-image:url(images/배경.png);text-align:center;color:white;font-size: 200%;vertical-align: baseline;width:100%;height:13%;z-index:10000;display: block '>
+        <span style="margin-left:-5%;margin-right:20%"><a href="main.php" style='text-decoration:none'><- BACK</a></span>
+        입어보고싶은 옷을 선택해주세요. <span style='margin-left:20%'>TOTAL<?php echo " $total_num"; ?></span></div>
 		<!-- Wrapper -->
 			<div id="wrapper">
-	    <h1>TOTAL <?php echo"$total_num"; ?> </h1>
+                         <h1>'</h1>
 				<!-- Main -->
 				<?php
 				$query2 = 'SELECT No,Color,Kind,Picture_Addr FROM Clothes_Info';
 				$res2 =  mysqli_query($conn,$query2);
 					?>
-					<div id="main">
+					
+<div id="main">
 						<div class="inner">
 							<header>
-								<h1>Clothes List<br /></h1>
+	<h1>Clothes List </h1>
 								<p></p>
 							</header>
 							<section class="tiles">
