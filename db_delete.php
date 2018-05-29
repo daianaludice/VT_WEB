@@ -14,7 +14,7 @@ if(!$conn){
   $No = addslashes($_GET["No"]);
   $Addr = addslashes($_GET["Addr"]);
 
-  $sql = "UPDATE Coordinate SET show_addr ='none' WHERE position = '$position'";
+  $sql = "UPDATE Coordinate SET show_addr ='black' WHERE position = '$position'";
   if (mysqli_query($conn,$sql)){
     }
     else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
@@ -26,7 +26,7 @@ if(!$conn){
   <html>
    <head>
       <script type="text/javascript">
-        location.href='select_clothe.php?No=<? echo $No;?>&Picture_Addr=<? echo $Addr ;?>';
+        location.href='select_clothe.php?No=<? echo $No;?>&Picture_Addr=black';
       </script>
    </head>
 
