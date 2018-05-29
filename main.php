@@ -62,7 +62,7 @@ $sql2 = "UPDATE Coordinate SET show_addr = NULL WHERE position = 'lower'";
 			               해당 옷을 입고 싶으시다면 <b><i>WEAR</i></b> 버튼을 누르고 옷장 문을 열어주세요.</p>
 
 								</header>
-								<a href="clothes_list.php" class="jumplink pic">
+								<a href="VT_list.php" class="jumplink pic">
 									<span class="arrow icon fa-chevron-right"><span>See my log</span></span>
 								</a>
 							</article>

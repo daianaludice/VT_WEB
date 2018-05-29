@@ -15,7 +15,7 @@ $dbname = "VT";
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>VT MAIN</title>
+		<title>Clothes List</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="Massets/js/ie/html5shiv.js"></script><![endif]-->
