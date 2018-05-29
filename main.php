@@ -15,12 +15,12 @@ $query2 = 'SELECT Picture_Addr FROM Clothes_Info';
 $res2 =  mysqli_query($conn,$query2);
 
 
-$sql = "UPDATE Coordinate SET show_addr = black WHERE position = 'upper'";
+$sql = "UPDATE Coordinate SET show_addr = 'black' WHERE position = 'upper'";
 if (mysqli_query($conn,$sql)){
   }
   else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
   }
-$sql2 = "UPDATE Coordinate SET show_addr = black WHERE position = 'lower'";
+$sql2 = "UPDATE Coordinate SET show_addr = 'black' WHERE position = 'lower'";
   if (mysqli_query($conn,$sql2)){
     }
     else{ echo "Error: " .$sql2 . "<br>" . mysqli_error($conn);
@@ -53,8 +53,6 @@ $sql2 = "UPDATE Coordinate SET show_addr = black WHERE position = 'lower'";
 
       <!-- Main -->
         <div id="main">
-          <? $test = 5;
-          echo $test*5; ?>
 
           <!-- Me -->
             <article id="me" class="panel">
@@ -64,7 +62,7 @@ $sql2 = "UPDATE Coordinate SET show_addr = black WHERE position = 'lower'";
                    사용자가 원하는 옷을 선택하면 거울 위로 해당 옷이 나타납니다.<br>
                    해당 옷을 입고 싶으시다면 <b><i>WEAR</i></b> 버튼을 누르고 옷장 문을 열어주세요.</p>
               </header>
-              <a href="clothes_list.php" class="jumplink pic">
+              <a href="VT_list.php" class="jumplink pic">
                 <span class="arrow icon fa-chevron-right"><span>See my log</span></span>
               </a>
             </article>

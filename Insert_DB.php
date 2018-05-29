@@ -1,6 +1,6 @@
 
 <?
-$db_host ="34.225.233.100:3306";
+$db_host ="localhost";
 $db_user = "root";
 $db_password ="1234";
 $db_name = "VT";
