@@ -125,15 +125,9 @@ if($lower_addr == 'black'){
           echo "<div style='position:fixed; margin-top:14%; margin-left :8%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' alt='None' class='image' width='65%' id='down' alt='None'/></div>";
           ?>
 
-<<<<<<< HEAD
-        </div id='db_con' >
-          <button class='button_css' id="cancle1"><a href='db_delete.php?position=upper&No=<? echo $No;?>&Addr=<? echo $Addr;?> style='text-decoration:none;'>상의 취소</a></button>
-          <button class='button_css' id="cancle2" style='margin-top:30%;' <a href='db_delete.php?position=lower&No=<? echo $No;?>&Addr=<? echo $Addr;?>'>하의 취소</button>
-=======
         </div id='db_con'>
           <a href='db_delete.php?position=upper&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle1">상의 취소</button></a>
           <a href='db_delete.php?position=lower&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle2" style='margin-top:30%;'>하의 취소</button></a>
->>>>>>> 6403e6560d1cf6c6b651bde846c6baa7c9352691
 
           <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;' id="recomment">
             <?php $fopen = fopen("list.txt", "r"); $list_1 = fgets($fopen); $list_2 = fgets($fopen); $list_3 = fgets($fopen); fclose($fopen);  ?>
