@@ -100,11 +100,11 @@ $lower_addr = $row4[0];
 
 				<!-- Header -->
 					<header id="header" style="background-image:url(images/배경.png)" >
-						<h1><a href="clothes_list.php" style='color:black'><- clothes list </a></h1>
-            <span style='color:white; font-size:130%; margin-left:25%'> 현재 선택한 옷입니다. 선택을 취소하려면 취소버튼을 눌러주세요.</span>
+						<h1><a href="VT_list.php" style='color:black'><- clothes list </a></h1>
+            <span style='color:white; font-size:130%; margin-left:25%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
 						<nav>
 							<ul>
-								<li><a href="Insert_DB.php?No=<? echo"$No";?>"><button>WEAR</button></a></p></li>
+								<li><a href="main.php"><button>WEAR</button></a></p></li>
 
 							</ul>
 						</nav>
@@ -113,26 +113,22 @@ $lower_addr = $row4[0];
 				<!-- Main -->
 					<div id="main">
             <?php
-					echo "<div style='position:fixed; margin-left :8%;z-index : 4;'><img src='images/thumbs/".$upper_addr.".png' class='image' width='70%' style=' z-index:-1000; padding-left:3%'/></div>";
-          echo "<div style='position:fixed; margin-top:14%; margin-left :8%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' class='image' width='65%'/></div>";
+					echo "<div style='position:fixed; margin-left :8%;z-index : 4;'><img src='images/thumbs/".$upper_addr.".png' class='image' width='70%' style=' z-index:-1000; padding-left:3%' id='up'/></div>";
+          echo "<div style='position:fixed; margin-top:14%; margin-left :8%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' class='image' width='65%' id='down'/></div>";
           ?>
 
-					</div>
-          <button class='button_css' id="cancle"  onclick="choose()">상의 취소</button>
-          <button class='button_css' id="cancle"  onclick="choose()" style='margin-top:30%;'>하의 취소</button>
+        </div id='db_con'>
+          <button class='button_css' id="cancle1"><a href='db_delete.php?position=upper&No=<?$No?>&Addr=<?$Addr?>'>상의 취소</a></button>
+          <button class='button_css' id="cancle2" style='margin-top:30%;'>하의 취소</button>
 
-          <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;'>
+          <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;' id="recomment">
             <?php $fopen = fopen("list.txt", "r"); $list_1 = fgets($fopen); $list_2 = fgets($fopen); $list_3 = fgets($fopen); fclose($fopen);  ?>
             <div style="color:white; font-size:150%;margin-left:2%;">코디 추천</div>
             <div style="color:white; font-size:120%;margin-left:2%;">1순위<img src='images/thumbs/<? echo $list_1; ?>.png' width='35%' height:'25%' ></div>
             <div style="color:white; font-size:120%;margin-left:2%;">2순위<img src='images/thumbs/<? echo $list_2; ?>.png' width='35%' height:'25%'></div>
             <div style="color:white; font-size:120%;margin-left:2%;">3순위<img src='images/thumbs/<? echo $list_3; ?>.png' width='35%' height:'25%'></div>
           </div>
-<script>
-function choose() {
-    document.getElementById("choose").style.color = "red";
-}
-</script>
 			</div>
+      <script src="assets/js/button_act.js"></script>
 </body>
 <html>
