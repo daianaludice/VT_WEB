@@ -61,8 +61,8 @@ $sql2 = "UPDATE Coordinate SET show_addr = 'black' WHERE position = 'lower'";
               <header style="margin-top:-6%">
                 <h1>VT PROJECT</h1>
                 <p style="font-size:90%"><br>VT 프로젝트는 사용자가 가진 옷의 리스트들을 보여줍니다.<br>
-                   사용자가 원하는 옷을 선택하면 거울 위로 해당 옷이 나타납니다.<br>
-                   해당 옷을 입고 싶으시다면 <b><i>WEAR</i></b> 버튼을 누르고 옷장 문을 열어주세요.</p>
+	   사용자가 원하는 옷을 선택하면 거울 위로 해당 옷이 나타납니다.<br><i>VT PROJECT</i>를 시작하려면 화살표를 눌러주세요.
+                  </p>
               </header>
               <a href="VT_list.php" class="jumplink pic">
                 <span class="arrow icon fa-chevron-right"><span>See my log</span></span>
