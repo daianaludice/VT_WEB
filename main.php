@@ -99,15 +99,17 @@ $sql2 = "UPDATE Coordinate SET show_addr = 'black' WHERE position = 'lower'";
               <header>
                 <h2>VT Manual</h2>
               </header>
-              <img src='images/p1.png' alt=''>
-              <img src='images/p2.png' alt=''>
-              <img src='images/p3.png' alt=''>
-              <img src='images/p4.png' alt=''>
-              <img src='images/p5.png' alt=''>
-              <img src='images/p6.png' alt=''>
-              <img src='images/p7.png' alt=''>
-              <img src='images/p8.png' alt=''>
-            </article>
+              <div >
+              <img src='images/p1.png' width='100%' alt=''>
+              <img src='images/p2.png' width='100%' alt=''>
+              <img src='images/p3.png' width='100%' alt=''>
+              <img src='images/p4.png' width='100%' alt=''>
+              <img src='images/p5.png' width='100%' alt=''>
+              <img src='images/p6.png' width='100%' alt=''>
+              <img src='images/p7.png' width='100%' alt=''>
+              <img src='images/p8.png' width='100%' alt=''>
+            </div>
+             </article>
 
         </div>
 
