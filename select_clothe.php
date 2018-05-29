@@ -120,8 +120,8 @@ $lower_addr = $row4[0];
           echo "<div style='position:fixed; margin-top:14%; margin-left :8%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' alt='None' class='image' width='65%' id='down' alt='None'/></div>";
           ?>
 
-        </div id='db_con'>
-          <button class='button_css' id="cancle1"><a href='db_delete.php?position=upper&No=<? echo $No;?>&Addr=<? echo $Addr;?>'>상의 취소</a></button>
+        </div id='db_con' >
+          <button class='button_css' id="cancle1"><a href='db_delete.php?position=upper&No=<? echo $No;?>&Addr=<? echo $Addr;? style='text-decoration:none;'>상의 취소</a></button>
           <button class='button_css' id="cancle2" style='margin-top:30%;' <a href='db_delete.php?position=lower&No=<? echo $No;?>&Addr=<? echo $Addr;?>'>하의 취소</button>
 
           <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;' id="recomment">

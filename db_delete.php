@@ -14,7 +14,7 @@ if(!$conn){
   $No = addslashes($_GET["No"]);
   $Addr = addslashes($_GET["Addr"]);
 
-  $sql = "UPDATE Coordinate SET show_addr ='0' WHERE position = '$position'";
+  $sql = "UPDATE Coordinate SET show_addr ='none' WHERE position = '$position'";
   if (mysqli_query($conn,$sql)){
     }
     else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
