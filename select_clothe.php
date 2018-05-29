@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 $servername = "localhost";
 $username = "root";
 $password = "1234";
@@ -48,7 +48,6 @@ $lower_addr = $row4[0];
 
 ?>
 
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -101,9 +100,9 @@ $lower_addr = $row4[0];
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header" style="background-image:url(images/¹è°æ.png)" >
+					<header id="header" style="background-image:url(images/ë°°ê²½.png)" >
 						<h1><a href="clothes_list.php" style='color:black'><- clothes list </a></h1>
-            <span style='color:white; font-size:130%; margin-left:25%'> ÇöÀç ¼±ÅÃÇÑ ¿ÊÀÔ´Ï´Ù. °íÁ¤ÇÏ·Á¸é ¹öÆ°À» ´­·¯ÁÖ¼¼¿ä</span>
+            <span style='color:white; font-size:130%; margin-left:25%'> í˜„ìž¬ ì„ íƒí•œ ì˜·ìž…ë‹ˆë‹¤. ê³ ì •í•˜ë ¤ë©´ ë²„íŠ¼ì„ ëˆŒëŸ¬ì£¼ì„¸ìš”</span>
 						<nav>
 							<ul>
 								<li><a href="Insert_DB.php?No=<? echo"$No";?>"><button>WEAR</button></a></p></li>
@@ -120,17 +119,17 @@ $lower_addr = $row4[0];
           ?>
 
 					</div>
-          <button class='button_css' id="choose" onclick="choose()">»óÀÇ °íÁ¤</button>
-          <button class='button_css' id="cancle">»óÀÇ °íÁ¤ Ãë¼Ò</button>
-          <button class='button_css' id="choose" onclick="choose()">ÇÏÀÇ °íÁ¤</button>
-          <button class='button_css' id="cancle">»óÀÇ °íÁ¤ Ãë¼Ò</button>
+          <button class='button_css' id="choose" onclick="choose()">ìƒì˜ ê³ ì •</button>
+          <button class='button_css' id="cancle">ìƒì˜ ê³ ì • ì·¨ì†Œ</button>
+          <button class='button_css' id="choose" onclick="choose()">í•˜ì˜ ê³ ì •</button>
+          <button class='button_css' id="cancle">ìƒì˜ ê³ ì • ì·¨ì†Œ</button>
 
           <div style='position:fixed;margin-left:80%; background-color:black; margin-top:-37%; width:33%'>
             <?php $fopen = fopen("list.txt", "r"); $list_1 = fgets($fopen); $list_2 = fgets($fopen); $list_3 = fgets($fopen); fclose($fopen);  ?>
-            <div>ÄÚµð ÃßÃµ</div>
-            <div style="color:white; font-size:140%">1¼øÀ§<img src='images/thumbs/<? echo $list_1; ?>.png' width='40%'></div>
-            <div style="color:white; font-size:140%">2¼øÀ§<img src='images/thumbs/<? echo $list_2; ?>.png' width='40%'></div>
-            <div style="color:white; font-size:140%">3¼øÀ§<img src='images/thumbs/<? echo $list_3; ?>.png' width='40%'></div>
+            <div>ì½”ë”” ì¶”ì²œ</div>
+            <div style="color:white; font-size:140%">1ìˆœìœ„<img src='images/thumbs/<? echo $list_1; ?>.png' width='40%'></div>
+            <div style="color:white; font-size:140%">2ìˆœìœ„<img src='images/thumbs/<? echo $list_2; ?>.png' width='40%'></div>
+            <div style="color:white; font-size:140%">3ìˆœìœ„<img src='images/thumbs/<? echo $list_3; ?>.png' width='40%'></div>
           </div>
 <script>
 function choose() {
