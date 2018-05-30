@@ -14,6 +14,8 @@ $dbname = "VT";
 $query2 = 'SELECT Picture_Addr FROM Clothes_Info';
 $res2 =  mysqli_query($conn,$query2);
 
+$que = 'SELECT upper,lower FROM Clothes_Log';
+$res =  mysqli_query($conn,$que);
 
 $sql = "UPDATE Coordinate SET show_addr = 'black' WHERE position = 'upper'";
 if (mysqli_query($conn,$sql)){
@@ -79,11 +81,12 @@ $sql2 = "UPDATE Coordinate SET show_addr = 'black' WHERE position = 'lower'";
               <section>
                 <div class="row">
                   <?php
-                  while ($row2 = $res2->fetch_assoc())
+                  while ($row10 = $res->fetch_assoc())
 
                   {
-                    echo"<div class='4u 12u$(mobile)'>
-                      <a href='#' class='image fit'><img src='images/pic05.jpg' alt=''></a>
+                   echo"<div class='4u 12u$(mobile)'>
+                      <a href='#' class='image fit'><img src='images/thumbs/".$row10['upper'].".png' alt=''></a>
+                        <a href='#' class='image fit'><img src='images/thumbs/".$row10['lower'].".png' alt=''></a>
                     </div>";
                   }
                     ?>
