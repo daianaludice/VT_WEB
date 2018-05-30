@@ -14,7 +14,7 @@ $dbname = "VT";
 $query2 = 'SELECT Picture_Addr FROM Clothes_Info';
 $res2 =  mysqli_query($conn,$query2);
 
-$que = 'SELECT upper,lower FROM Clothes_Log';
+$que = 'SELECT upper,lower FROM Clothes_Log order by No desc';
 $res =  mysqli_query($conn,$que);
 
 $sql = "UPDATE Coordinate SET show_addr = 'black' WHERE position = 'upper'";
