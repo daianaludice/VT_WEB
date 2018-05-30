@@ -1,5 +1,5 @@
 ﻿<?php
-$servername = "localhost";
+$servername = "34.225.233.100:3306";
 $username = "root";
 $password = "1234";
 $dbname = "VT";
@@ -112,7 +112,7 @@ if($lower_addr == 'black'){
             <span style='color:white; font-size:130%; margin-left:25%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
 						<nav>
 							<ul>
-								<li><a href="main.php"><button>WEAR</button></a></p></li>
+								<li><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>WEAR</button></a></p></li>
 
 							</ul>
 						</nav>
@@ -132,7 +132,7 @@ if($lower_addr == 'black'){
           <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;' id="recomment">
             <?php $fopen = fopen("list.txt", "r"); $list_1 = fgets($fopen); $list_2 = fgets($fopen); $list_3 = fgets($fopen); fclose($fopen);  ?>
             <div style="color:white; font-size:150%;margin-left:2%;">코디 추천</div>
-            <div style="color:white; font-size:120%;margin-left:2%; text-decoration:none;">1순위<a href='change.php?list=<? echo $list_1; ?>&No=<? echo $No;?>' style='text-decoration: none;'><img src='images/thumbs/<? echo $list_1; ?>.png' width='35%' height:'25%' style='text-decoration:none;'></a></div>
+            <div style="color:white; font-size:120%;margin-left:2%;">1순위<a href='change.php?list=<? echo $list_1; ?>&No=<? echo $No;?>'><img src='images/thumbs/<? echo $list_1; ?>.png' width='35%' height:'25%' style='text-decoration:none;'></a></div>
             <div style="color:white; font-size:120%;margin-left:2%;">2순위<a href='change.php?list=<? echo $list_2; ?>&No=<? echo $No;?>'><img src='images/thumbs/<? echo $list_2; ?>.png' width='35%' height:'25%'></a></div>
             <div style="color:white; font-size:120%;margin-left:2%;">3순위<a href='change.php?list=<? echo $list_3; ?>&No=<? echo $No;?>'><img src='images/thumbs/<? echo $list_3; ?>.png' width='35%' height:'25%'></a></div>
           </div>
