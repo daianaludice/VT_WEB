@@ -66,6 +66,10 @@ $re1 =  mysqli_query($conn,$qu1);
 $ro1 = $re1 -> fetch_array();
 $list_1 = $ro1[0];
 
+x
+x
+x
+x
 
 $qu2 = "SELECT addr FROM Recommend_List where No = '2'" ;
 $re2 =  mysqli_query($conn,$qu2);
@@ -90,40 +94,6 @@ $list_3 = $ro3[0];
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
     <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-    .button_css{
-      text-decoration: none;
-     font-family: Arial, Helvetica, sans-serif;
-     font-size: 17px;
-     color: #ffffff;
-     padding: 2px 20px;
-     background: -moz-linear-gradient(
-       top,
-       #6b6b6b 0%,
-       #000000);
-     background: -webkit-gradient(linear, left top, left bottom,from(#6b6b6b),to(#000000));
-     -moz-border-radius: 30px;
-     -webkit-border-radius: 30px;
-     border-radius: 30px;
-     border: 1px solid #000000;
-     -moz-box-shadow:
-       0px 1px 3px rgba(000,000,000,0.5),
-       inset 0px 0px 1px rgba(255,255,255,0.7);
-     -webkit-box-shadow:
-       0px 1px 3px rgba(000,000,000,0.5),
-       inset 0px 0px 1px rgba(255,255,255,0.7);
-     box-shadow:
-       0px 1px 3px rgba(000,000,000,0.5),
-       inset 0px 0px 1px rgba(255,255,255,0.7);
-     text-shadow:
-       0px -1px 0px rgba(000,000,000,0.4),
-       0px 1px 0px rgba(255,255,255,0.3);
-     left:50%;
-     top:20%;
-     width:22%;
-     height:10%;
-     position : fixed;}
-    </style>
 </head>
 <body style="background-color: white">
 			<div id="wrapper">
@@ -131,11 +101,11 @@ $list_3 = $ro3[0];
 				<!-- Header -->
 					<header id="header" style="background-image:url(images/배경.png)" >
 						<h1><a href="VT_list.php" style='color:black'><- clothes list </a></h1>
-            <span style='color:white; font-size:130%; margin-left:13%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
+            <span style='color:white; font-size:130%; margin-left:3%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
 						<nav>
 							<ul>
-							 <li><a href="db_delete.php?No=<? echo $No; ?>"><button>RESET</button></a></li>
-	<li><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>Go to MAIN</button></a></p></li>
+							 <li> href="db_delete.php?No=<? echo $No; ?>"><button>RESET</button></a></li>
+	<li style='margin-left:-50px;margin-right:-20px;'><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>Go to MAIN</button></a></p></li>
 
 							</ul>
 						</nav>
