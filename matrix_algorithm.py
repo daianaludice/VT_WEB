@@ -8,7 +8,6 @@ db = pymysql.connect(host="34.225.233.100",
                          db="VT",
                          port = 3306)
 while(True):
-    time.sleep(1)
     curs1 = db.cursor()
     curs2 = db.cursor()
     sql1 = "select * from Clothes_Info"

@@ -40,17 +40,6 @@ if($position == 'lower'){
     }
 }
 
-try{
-  echo "Execute python code\n";
-  //exec("python /var/www/html/VT_WEB/matrix_algorithm.py 2>&1", $output);
-  $command = escapeshellcmd('python matrix_algorithm.py 2>&1');
-  $output = shell_exec($command);
-  echo $output;
-}catch(Exception $e){
-  echo "Error occured!";
-  echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
-
 $que = "SELECT show_addr FROM Coordinate where position='upper'" ;
 $res3 =  mysqli_query($conn,$que);
 $row3 =  mysqli_fetch_array($res3);
