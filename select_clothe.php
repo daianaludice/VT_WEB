@@ -60,6 +60,14 @@ if($lower_addr == 'black'){
 $que3 = "UPDATE Recommend_List set position = '$position' where No = '0'";
 if( mysqli_query($conn,$que3)){
  }
+
+$query = "SELECT addr FROM Recommend_List where No = '1'or No ='2'or No ='3' " ;
+$res =  mysqli_query($conn,$query);
+$row = $res -> fetch_array();
+$list_1 = $row[0];
+$list_2 = $row[1];
+$list_3 = $row[2];
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -97,8 +105,12 @@ if( mysqli_query($conn,$que3)){
           ?>
 
 
+<<<<<<< HEAD
           <div style='position:fixed;margin-left:70%; background-color:black; width:35%; height:95%;text-decoration:none;' id="recomment">
             <?php $fopen = fopen("list.txt", "r"); $list_1 = fgets($fopen); $list_2 = fgets($fopen); $list_3 = fgets($fopen); fclose($fopen);  ?>
+=======
+          <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;text-decoration:none;' id="recomment">
+>>>>>>> 7a13bb0ba259628d733729cfd9ac896f89591574
             <div style="color:white; font-size:150%;margin-left:2%;">코디 추천</div>
             <a href='change.php?list=<? echo $list_1; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">1순위<img src='images/thumbs/<? echo $list_1; ?>.png' width='55%' height:'25%'></div></a>
             <a href='change.php?list=<? echo $list_2; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">2순위<img src='images/thumbs/<? echo $list_2; ?>.png' width='55%' height:'25%'></div></a>
