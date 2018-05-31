@@ -4,6 +4,12 @@ $username = "root";
 $password = "1234";
 $dbname = "VT";
 
+
+//Option to print Error
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+
 // Create connection
  $conn = mysqli_connect($servername, $username, $password, $dbname);
  // Check connection
@@ -34,8 +40,16 @@ if($position == 'lower'){
     }
 }
 
-
-exec("python matrix_algorithm.py");
+try{
+  echo "Execute python code\n";
+  //exec("python /var/www/html/VT_WEB/matrix_algorithm.py 2>&1", $output);
+  $command = escapeshellcmd('python matrix_algorithm.py 2>&1');
+  $output = shell_exec($command);
+  echo $output;
+}catch(Exception $e){
+  echo "Error occured!";
+  echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
 
 $que = "SELECT show_addr FROM Coordinate where position='upper'" ;
 $res3 =  mysqli_query($conn,$que);
@@ -93,10 +107,10 @@ if($lower_addr == 'black'){
      text-shadow:
        0px -1px 0px rgba(000,000,000,0.4),
        0px 1px 0px rgba(255,255,255,0.3);
-    margin-left: 45%;
+    margin-left: 50%;
     margin-top : 10%;
-    width: 18%;
-    height: 7%;
+    width: 22%;
+    height: 10%;
     position:fixed;
     }
     #cancle{
@@ -110,7 +124,7 @@ if($lower_addr == 'black'){
 				<!-- Header -->
 					<header id="header" style="background-image:url(images/배경.png)" >
 						<h1><a href="VT_list.php" style='color:black'><- clothes list </a></h1>
-            <span style='color:white; font-size:130%; margin-left:25%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
+            <span style='color:white; font-size:130%; margin-left:10%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
 						<nav>
 							<ul>
 								<li><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>WEAR</button></a></p></li>

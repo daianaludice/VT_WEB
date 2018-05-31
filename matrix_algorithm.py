@@ -1,6 +1,7 @@
 import pymysql
 import sys
 
+
 db = pymysql.connect(host="34.225.233.100",
                      user="root",
                      passwd="1234",
@@ -135,6 +136,12 @@ else:
         topList[j].append(sum1)
         j += 1
     newlist = sorted(topList,  key=lambda x: x[4],reverse=True)
-f = open("list.txt", 'w')
-for i in newlist:
-    f.write(str(i[3])+'\n')
+
+try:
+    f = open("list.txt", 'w')
+    for i in newlist:
+        f.write(str(i[3])+'\n')
+except Exception as e:
+    print("Error occured!")
+    print(e)
+

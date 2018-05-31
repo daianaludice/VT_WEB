@@ -31,8 +31,8 @@ $dbname = "VT";
 					$total_num = $row1[0];
 											?>
       <div style='opacity: 0.8;position:fixed;background-image:url(images/배경.png);text-align:center;color:white;font-size: 200%;vertical-align: baseline;width:100%;height:10%;z-index:10000;display: block '>
-        <span style="margin-left:-5%;margin-right:20%"><a href="main.php" style='text-decoration:none'><- BACK</a></span>
-        입어보고싶은 옷을 선택해주세요. <span style='margin-left:20%'>TOTAL<?php echo " $total_num"; ?></span></div>
+        <span style="margin-right:20%"><a href="main.php" style='text-decoration:none'><- BACK</a></span>
+        입어보고싶은 옷을 선택해주세요. <span style='margin-left:14%'><b>TOTAL<?php echo " $total_num"; ?></b></span></div>
 		<!-- Wrapper -->
 			<div id="wrapper">
                          <h1 style='opacity:0'>'</h1>
