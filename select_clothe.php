@@ -107,15 +107,11 @@ if($lower_addr == 'black'){
      text-shadow:
        0px -1px 0px rgba(000,000,000,0.4),
        0px 1px 0px rgba(255,255,255,0.3);
-    margin-left: 50%;
-    margin-top : 10%;
-    width: 22%;
-    height: 10%;
-    position:fixed;
-    }
-    #cancle{
-
-    }
+     left:50%;
+     top:20%;
+     width:22%;
+     height:10%;
+     position : fixed;}
     </style>
 </head>
 <body style="background-color: white">
@@ -124,10 +120,10 @@ if($lower_addr == 'black'){
 				<!-- Header -->
 					<header id="header" style="background-image:url(images/배경.png)" >
 						<h1><a href="VT_list.php" style='color:black'><- clothes list </a></h1>
-            <span style='color:white; font-size:130%; margin-left:10%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
+            <span style='color:white; font-size:130%; margin-left:13%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
 						<nav>
 							<ul>
-								<li><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>WEAR</button></a></p></li>
+								<li><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>Go to MAIN</button></a></p></li>
 
 							</ul>
 						</nav>
@@ -136,13 +132,13 @@ if($lower_addr == 'black'){
 				<!-- Main -->
 					<div id="main">
             <?php
-					echo "<div style='position:fixed; margin-left :8%;z-index : 4;'><img src='images/thumbs/".$upper_addr.".png' class='image' width='70%' style=' z-index:-1000; padding-left:3%' id='up' alt='None'/></div>";
-          echo "<div style='position:fixed; margin-top:14%; margin-left :8%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' alt='None' class='image' width='65%' id='down' alt='None'/></div>";
+					echo "<div style='position:fixed; margin-left :8%;z-index : 4;'><img src='images/thumbs/".$upper_addr.".png' class='image' width='60%' style=' z-index:-1000; padding-left:3%' id='up' alt='None'/></div>";
+          echo "<div style='position:fixed; margin-top:14%; margin-left :8%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' alt='None' class='image' width='55%' id='down' alt='None'/></div>";
           ?>
 
         </div id='db_con'>
-          <a href='db_delete.php?position=upper&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle1">상의 취소</button></a>
-          <a href='db_delete.php?position=lower&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle2" style='margin-top:30%;'>하의 취소</button></a>
+         <a href='db_delete.php?position=upper&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle1">상의 취소</button></a>
+          <a href='db_delete.php?position=lower&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle2" style='top:40%;'>하의 취소</button></a>
 
           <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;text-decoration:none;' id="recomment">
             <?php $fopen = fopen("list.txt", "r"); $list_1 = fgets($fopen); $list_2 = fgets($fopen); $list_3 = fgets($fopen); fclose($fopen);  ?>
