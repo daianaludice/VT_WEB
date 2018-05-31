@@ -34,7 +34,7 @@ if($addr2 == NULL){
 <head>
 <link rel="stylesheet" href="assets/css/show_clothe_css.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-<meta http-equiv="refresh" content="1">
+<meta http-equiv="refresh" content="0.5">
 
 <style>
  #img{
@@ -50,7 +50,7 @@ if($addr2 == NULL){
   $Y =date(" Y");
   $m_d =date("m.d");
   $h_i =date("H:i");
-  echo "<p style='font-size:350%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
+  echo "<p style='font-size:350%;margin-left:10%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
   ?>
 <p id="img" style="position:fixed"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']?>" alt=""/></p>
 <p id="img" style="position:fixed"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']?>" width="<? echo  $row['width']?>" alt=""/></p>

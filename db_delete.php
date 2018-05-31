@@ -28,7 +28,7 @@ if (mysqli_query($conn,$sql2)){
   <html>
    <head>
       <script type="text/javascript">
-        location.href='select_clothe.php?No=<? echo $No ;?>&Picture_Addr=black';
+        location.href='VT_list.php';
       </script>
    </head>
 
