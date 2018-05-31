@@ -57,9 +57,9 @@ if($lower_addr == 'black'){
   $lower_addr = 0;
 }
 
-$fopen = fopen("show.txt", "w"); 
-fwrite($fopen,$Addr);
-fclose($fopen);
+$que3 = "UPDATE Recommend_List set position = '$position' where No = '0'";
+if( mysqli_query($conn,$que3)){
+ }
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -116,7 +116,8 @@ fclose($fopen);
             <span style='color:white; font-size:130%; margin-left:13%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
 						<nav>
 							<ul>
-								<li><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>Go to MAIN</button></a></p></li>
+							 <li><a href="db_delete.php?No=<? echo $No; ?>"><button>RESET</button></a></li>
+	<li><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>Go to MAIN</button></a></p></li>
 
 							</ul>
 						</nav>

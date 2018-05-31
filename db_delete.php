@@ -10,24 +10,17 @@ if(!$conn){
   die("connetction failed:" . mysqli_connect_error());
   }
 
-  $position = addslashes($_GET["position"]);
-
-  $query = "SELECT show_addr FROM Coordinate where position = '$position '" ;
-  $res =  mysqli_query($conn,$query);
-  $row = $res -> fetch_array();
-  $show_addr = $row[0];
-
-  $query1 = "SELECT No FROM Clothes_Info where Picture_Addr = $show_addr " ;
-  $res1 =  mysqli_query($conn,$query1);
-  $row1 = $res1 -> fetch_array();
-  $show_no = $row1[0];
-
-
-$sql = "UPDATE Coordinate SET show_addr ='black' WHERE position = '$position'";
+$No = addslashes($_GET["No"]);
+$sql = "UPDATE Coordinate SET show_addr ='black' WHERE position = 'upper'";
 if (mysqli_query($conn,$sql)){
   }
     else{ echo "Error: " .$sql . "<br>" . mysqli_error($conn);
     }
+$sql2 = "UPDATE Coordinate SET show_addr ='black' WHERE position ='lower'";
+if (mysqli_query($conn,$sql2)){
+   }
+   else{ echo "Error : " .$sql2." <br>".mysqli_error($conn);
+}
 
   mysqli_close($conn);
 
@@ -35,7 +28,7 @@ if (mysqli_query($conn,$sql)){
   <html>
    <head>
       <script type="text/javascript">
-        location.href='select_clothe.php?No=<? echo $show_no ;?>&Picture_Addr=black';
+        location.href='select_clothe.php?No=<? echo $No ;?>&Picture_Addr=black';
       </script>
    </head>
 
