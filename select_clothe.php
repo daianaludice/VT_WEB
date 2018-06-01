@@ -66,10 +66,6 @@ $re1 =  mysqli_query($conn,$qu1);
 $ro1 = $re1 -> fetch_array();
 $list_1 = $ro1[0];
 
-x
-x
-x
-x
 
 $qu2 = "SELECT addr FROM Recommend_List where No = '2'" ;
 $re2 =  mysqli_query($conn,$qu2);
