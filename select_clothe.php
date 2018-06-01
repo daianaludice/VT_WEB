@@ -61,6 +61,7 @@ $que3 = "UPDATE Recommend_List set position = '$position' where No = '0'";
 if( mysqli_query($conn,$que3)){
  }
 
+sleep(2);
 $qu1 = "SELECT addr FROM Recommend_List where No = '1'" ;
 $re1 =  mysqli_query($conn,$qu1);
 $ro1 = $re1 -> fetch_array();
@@ -100,7 +101,7 @@ $list_3 = $ro3[0];
             <span style='color:white; font-size:130%; margin-left:3%' id="call"> 현재 선택한 옷입니다. 다른 옷을 입으시려면 Clothes List를 눌러주세요.</span>
 						<nav>
 							<ul>
-							 <li> href="db_delete.php?No=<? echo $No; ?>"><button>RESET</button></a></li>
+							 <li><a href="db_delete.php?No=<? echo $No; ?>"><button>RESET</button></a></li>
 	<li style='margin-left:-50px;margin-right:-20px;'><a href="Insert_DB.php?upper=<? echo $upper_addr; ?>&lower=<? echo $lower_addr; ?>"><button>Go to MAIN</button></a></p></li>
 
 							</ul>
@@ -110,19 +111,16 @@ $list_3 = $ro3[0];
 				<!-- Main -->
 					<div id="main">
             <?php
-					echo "<div style='position:fixed; margin-left :8%;z-index : 4;'><img src='images/thumbs/".$upper_addr.".png' class='image' width='60%' style=' z-index:-1000; padding-left:3%' id='up' alt='None'/></div>";
-          echo "<div style='position:fixed; margin-top:14%; margin-left :8%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' alt='None' class='image' width='55%' id='down' alt='None'/></div>";
+					echo "<div style='position:fixed; margin-left :15%;z-index : 4;'><img src='images/thumbs/".$upper_addr.".png' class='image' width='60%' style=' z-index:-1000; padding-left:3%' id='up' alt='None'/></div>";
+          echo "<div style='position:fixed; margin-top:14%; margin-left :15%; z-index:1'><img src='images/thumbs/".$lower_addr.".png' alt='None' class='image' width='55%' id='down' alt='None'/></div>";
           ?>
 
-        </div id='db_con'>
-         <a href='db_delete.php?position=upper&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle1">상의 취소</button></a>
-          <a href='db_delete.php?position=lower&No=<? echo $No;?>&Addr=<? echo $Addr;?>'><button class='button_css' id="cancle2" style='top:40%;'>하의 취소</button></a>
 
-          <div style='position:fixed;margin-left:80%; background-color:black; width:35%; height:95%;text-decoration:none;' id="recomment">
+          <div style='position:fixed;margin-left:70%; background-color:black; width:35%; height:95%;text-decoration:none;' id="recomment">
             <div style="color:white; font-size:150%;margin-left:2%;">코디 추천</div>
-            <a href='change.php?list=<? echo $list_1; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">1순위<img src='images/thumbs/<? echo $list_1; ?>.png' width='35%' height:'25%'></div></a>
-            <a href='change.php?list=<? echo $list_2; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">2순위<img src='images/thumbs/<? echo $list_2; ?>.png' width='35%' height:'25%'></div></a>
-            <a href='change.php?list=<? echo $list_3; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">3순위<img src='images/thumbs/<? echo $list_3; ?>.png' width='35%' height:'25%'></div></a>
+            <a href='change.php?list=<? echo $list_1; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">1순위<img src='images/thumbs/<? echo $list_1; ?>.png' width='55%' height:'25%'></div></a>
+            <a href='change.php?list=<? echo $list_2; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">2순위<img src='images/thumbs/<? echo $list_2; ?>.png' width='55%' height:'25%'></div></a>
+            <a href='change.php?list=<? echo $list_3; ?>&No=<? echo $No;?>'><div style="color:white; font-size:120%;margin-left:2%;">3순위<img src='images/thumbs/<? echo $list_3; ?>.png' width='55%' height:'25%'></div></a>
           </div>
 			</div>
       <script src="assets/js/button_act.js"></script>

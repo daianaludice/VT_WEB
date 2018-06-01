@@ -37,10 +37,10 @@ if($addr2 == NULL){
 <meta http-equiv="refresh" content="0.5">
 
 <style>
- #img{
-  padding-left : <? echo $row2['y']?>px;
-  padding-top: <? echo $row2['x']?>px;
- }
+ #upper{
+  z-index: 10;}
+ #lower{
+  z-index: 5;}
 </style>
 </head>
 <body>
@@ -50,9 +50,10 @@ if($addr2 == NULL){
   $Y =date(" Y");
   $m_d =date("m.d");
   $h_i =date("H:i");
-  echo "<p style='font-size:350%;margin-left:10%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
+  echo "<p style='font-size:350%;margin-left:8%;padding-top:10%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
   ?>
-<p id="img" style="position:fixed"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']?>" alt=""/></p>
-<p id="img" style="position:fixed"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']?>" width="<? echo  $row['width']?>" alt=""/></p>
+<p id="upper" style="position:fixed;top:330px;left:110px"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']+730?>" alt=""/></p>
+
+<p id="lower" style="position:fixed;bottom:10px;top:650px;left:100px;"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']?>" width="<? echo  $row['width']+850?>" alt=""/></p>
 </body>
 </html>
