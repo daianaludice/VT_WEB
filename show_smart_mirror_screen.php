@@ -34,8 +34,7 @@ if($addr2 == NULL){
 <head>
 <link rel="stylesheet" href="assets/css/show_clothe_css.css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-<meta http-equiv="refresh" content="0.5
-">
+<meta http-equiv="refresh" content="0.5">
 
 <style>
 #upper{
@@ -51,17 +50,9 @@ if($addr2 == NULL){
   $Y =date(" Y");
   $m_d =date("m.d");
   $h_i =date("H:i");
-<<<<<<< HEAD
-  echo "<p style='font-size:350%;margin-left:10%;padding-top:10%; z-index:30; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
-  
-?>
-<p id="upper" style="position:fixed;top:330px;left:110px;<? if($addr1 == 'black'){echo "z-index:3";}?>"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']+730?>" alt=""/></p>
-
-=======
   echo "<p style='font-size:350%;margin-left:8%;padding-top:10%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
   ?>
 <p id="upper" style="position:fixed;top:330px;left:110px;"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']?>" width="<? echo  $row2['width']+730?>" alt=""/></p>
->>>>>>> b677c842909783c2d896c9ccb142fb72ba534eca
 <p id="lower" style="position:fixed;bottom:10px;top:650px;left:100px;"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']?>" width="<? echo  $row['width']+850?>" alt=""/></p>
 </body>
 </html>
