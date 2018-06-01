@@ -17,8 +17,8 @@ rows = curs1.fetchall()
 selectClothe = curs2.fetchall()
 
 m1 = [[1, 4, 1, 1,2], [4, 3, 3, 3,2], [3, 4, 2, 1,2], [4, 1, 3, 4,2], [2, 3, 2, 1,2],[2,2,2,2,2]]
-m2 = [[3, 4, 4, 3, 1, 4, 4, 3, 2,2], [4, 2, 1, 4, 3, 4, 3, 3, 2,2], [3, 3, 2,   2, 4, 4, 2,   3, 1,2],
-      [1, 1, 3, 2, 4,   3,   3,   1, 1,2], [2,   3, 4, 3, 2,   4,   2,   2, 3,2],[2,2,2,2,2,2,2,2,2,2]]
+m2 = [[3, 4, 4, 3, 1, 4, 4, 3, 2,2], [4, 2, 1, 4, 3, 4, 3, 3, 2,2], [3, 3, 2,	2, 4, 4, 2,	3, 1,2],
+      [1, 1, 3, 2, 4,	3,	3,	1, 1,2], [2,	3, 4, 3, 2,	4,	2,	2, 3,2],[2,2,2,2,2,2,2,2,2,2]]
 
 
 def summ2(list1, list2):
@@ -41,9 +41,9 @@ def changeColorUp(color):
         return 4
     elif (color == "White"):
         return 5
-    elif (color == "Black"):
+    elif (color == "Black" or color =='black'):
         return 6
-    elif (color == "Grey"):
+    elif (color == "Grey" or color == "darkgray" or color == "darkslategray" or color =="dimgrey"):
         return 7
     else:
         return 9
@@ -67,7 +67,7 @@ def changeColorDown(color):
         return 1
     elif (color == "Beige"):
         return 2
-    elif (color == "Khaki" | color == "Charcoal"):
+    elif (color == "Khaki" or color == "Charcoal"):
         return 3
     elif (color == "Black"):
         return 4
@@ -89,8 +89,7 @@ def changeKindDown(Kind):
         return 5
 
 chooseCloth = 0
-
-if(selectClothe[0][5] == None):
+if(selectClothe[0][5] == None or selectClothe[0][5] == "black"):
     chooseCloth = selectClothe[1][5]
 else:
     chooseCloth = selectClothe[0][5]
@@ -114,13 +113,13 @@ if(int(chooseCloth) <= 9):
         sum1 = summ2(topList[select], i)
         pantsList[j].append(sum1)
         j += 1
-    newlist = sorted(pantsList, key=lambda x:x[4], reverse=True)
+    newlist = sorted(pantsList, key=lambda x:x[4],reverse=True)
 else:
     for i in topList:
         sum1 = summ2(i, pantsList[select-10])
         topList[j].append(sum1)
         j += 1
-    newlist = sorted(topList,  key=lambda x: x[4], reverse=True)
+    newlist = sorted(topList,  key=lambda x: x[4],reverse=True)
 f = open("list.txt", 'w')
 for i in newlist:
     if(i[4]>=5):
