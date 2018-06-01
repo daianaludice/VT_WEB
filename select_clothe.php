@@ -56,6 +56,10 @@ if($upper_addr == 'black'){
 if($lower_addr == 'black'){
   $lower_addr = 0;
 }
+
+$fopen = fopen("show.txt", "w"); 
+fwrite($fopen,$Addr);
+fclose($fopen);
 ?>
 <!DOCTYPE HTML>
 <html>
