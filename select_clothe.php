@@ -61,12 +61,22 @@ $que3 = "UPDATE Recommend_List set position = '$position' where No = '0'";
 if( mysqli_query($conn,$que3)){
  }
 
-$query = "SELECT addr FROM Recommend_List where No = '1'or No ='2'or No ='3' " ;
-$res =  mysqli_query($conn,$query);
-$row = $res -> fetch_array();
-$list_1 = $row[0];
-$list_2 = $row[1];
-$list_3 = $row[2];
+$qu1 = "SELECT addr FROM Recommend_List where No = '1'" ;
+$re1 =  mysqli_query($conn,$qu1);
+$ro1 = $re1 -> fetch_array();
+$list_1 = $ro1[0];
+
+
+$qu2 = "SELECT addr FROM Recommend_List where No = '2'" ;
+$re2 =  mysqli_query($conn,$qu2);
+$ro2 = $re2 -> fetch_array();
+$list_2 = $ro2[0];
+
+
+$qu3 = "SELECT addr FROM Recommend_List where No = '3'" ;
+$re3 =  mysqli_query($conn,$qu3);
+$ro3 = $re3 -> fetch_array();
+$list_3 = $ro3[0];
 
 ?>
 <!DOCTYPE HTML>
