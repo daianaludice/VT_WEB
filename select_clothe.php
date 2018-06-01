@@ -95,7 +95,8 @@ if($lower_addr == 'black'){
        0px 1px 0px rgba(255,255,255,0.3);
     margin-left: 45%;
     margin-top : 10%;
-    width: 15%;
+    width: 18%;
+    height: 7%;
     position:fixed;
     }
     #cancle{
