@@ -57,9 +57,8 @@ if($addr2 == NULL){
   $m_d =date("m.d");
   $h_i =date("h:i");
   echo "<p style='font-size:500%; font-family: Sans-Serif'><b> $Y <br> $m_d <br> $h_i</b></p>";
-?> 
-<div id='upper' style='position:fixed'><img src='images/thumbs/<? echo "$addr1";?>.png' height="<?echo "$row2['height']"; ?>+100" width="<? echo"$row2['width']";?>+918" alt=''/></div>
-<div id='lower' style='position:fixed'><img src='images/thumbs/<? echo"$addr2"; ?>.png' height=" <? echo "$row['height']"; ?>+30" width=" <? echo "$row['width']";+981"  alt=''/></div>
-
+  ?>
+<div id="upper" style="position:fixed"><img src="images/thumbs/<? echo $addr1; ?>.png" height"<? echo $row2['height']+100?>" width="<? echo  $row2['width']+918?>" alt=""/></div>
+<div id="lower" style="position:fixed"><img src="images/thumbs/<? echo $addr2; ?>.png" height"<? echo $row['height']+30?>" width="<? echo  $row['width']+981?>" alt=""/></div>
 </body>
 </html>
